@@ -28,7 +28,7 @@ if __name__=='__main__':
             cc_list = [line.strip() for line in f]
             cc_list_length = len(cc_list)
             for i in range(cc_list_length):
-                soup = Soup.get('https://cccheckerpro.com/api.php?lista='+cc_list[i])
+                soup = Soup.get('https://api.bincodes.com/cc/?format=[FORMAT]&api_key=[API_KEY]&cc=[CC])
                 ress = soup.find("b").text
                 if ress == 'Live':
                         cc_live.append(cc_list[i])
